@@ -8,7 +8,7 @@
 
 <!-- ヘッダー情報のページタイトルは
     ベーステンプレートを利用するページで設定する -->
-{% block title %}Django's Blog{% endblock %}
+{% block title %}Django's Blog - Music{% endblock %}
     
     <!-- Navigation-->
     <!-- ナビゲーションはベーステンプレートで設定済みなので削除 -->
@@ -24,7 +24,8 @@
                     <div class="site-heading">
                         <!-- ヘッダーの大見出し(タイトル)を変更 -->
                         <h1>Django's Blog</h1>
-                        <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                        <!-- サブタイトルを変更 -->
+                        <span class="subheading">Musicカテゴリの記事一覧</span>
                     </div>
                 </div>
             </div>
@@ -41,7 +42,7 @@
                 <!--
                     全レコードが格納されたorderby_recordsからレコードを一件ずつrecordに取り出す
                 -->
-                {% for record in orderby_records %}
+                {% for record in music_records %}
                 <div class="post-preview">
                     <!-- 
                         urlでURLパターン'blog-detail/記事のid/'を生成し、
