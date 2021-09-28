@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #作成したblogアプリを追加する
     'blog.apps.BlogConfig',
+    'livereload',
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+from django.contrib.messages import constants
+# レベル変数を指定するための環境変数MESSAGE_TAGS
+MESSAGE_TAGS = {
+    constants.SUCCESS: 'alert alert-success',
+}
+
+# フォームの送信データをターミナルに出力
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Internationalization

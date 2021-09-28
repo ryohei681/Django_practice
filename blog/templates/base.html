@@ -55,7 +55,15 @@
                                 ナビゲーションメニューの「MUSIC」のリンク先を
                                 名前付きURLパターンmusic_listに設定する
                             -->
-                            <a class="nav-link" href="{% url 'blog:music_list' %}">MUSIC</a></li>
+                            <a class="nav-link" href="{% url 'blog:music_list' %}">MUSIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <!--
+                                ナビゲーションメニューの「CONTACT」のリンク先を
+                                名前付きURLパターンcontactに設定する
+                            -->
+                            <a class="nav-link" href="{% url 'blog:contact' %}">CONTACT</a>
+                        </li>
                     </ul>
                 </div>
             </div>
